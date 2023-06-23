@@ -1,0 +1,1 @@
+systemcomposer.profile.Profile.closeAll;

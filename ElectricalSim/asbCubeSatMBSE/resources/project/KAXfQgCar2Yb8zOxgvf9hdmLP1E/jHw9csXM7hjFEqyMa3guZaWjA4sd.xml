@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="CubeSatMBSEModel/asbCubeSatArchModel.slx" GroupUUID="c8958af9-55fa-4add-b0d1-ba18650db386" Icon="" Name="Open Architecture Model" Type="Basic" Visible="1">
+  <Extension Name="StartUpPrev" Value="2b23a590-cc6e-48dd-90f3-3959d17ce426"/>
+</Info>
