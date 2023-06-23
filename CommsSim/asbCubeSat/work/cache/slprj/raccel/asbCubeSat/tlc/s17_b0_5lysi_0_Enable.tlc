@@ -1,0 +1,43 @@
+%implements s17_b0_5lysi_0_Enable "C"
+
+%function Enable(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T t;
+%closefile localVarDecl
+t = %<(SLibCG_SE(RTMGet("TStart")))>;
+if (%<(SLibCG_SE(LibGetTaskTime(1)))> != t) {
+    %<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+}
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(13, 3, 0)>\
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Enable", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Enable"))
+%<SLibCG_AccessArg(0, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Enable", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Enable"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedEnableLocalVars", localVarDecl)>
+%endfunction
+%function EnableFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void l152oexjzd(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<comma>%<::tSimStructType> *rtS_e\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("l152oexjzd", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

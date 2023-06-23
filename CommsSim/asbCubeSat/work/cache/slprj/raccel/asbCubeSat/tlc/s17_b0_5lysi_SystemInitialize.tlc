@@ -1,0 +1,200 @@
+%implements s17_b0_5lysi_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T euler_idx_0;
+real_T euler_idx_1;
+real_T euler_idx_2;
+real_T pData_idx_0;
+real_T pData_idx_0_e;
+real_T pData_idx_0_p;
+real_T pData_idx_1;
+real_T pData_idx_1_p;
+real_T pData_idx_2;
+real_T pData_idx_2_e;
+real_T pData_idx_2_i;
+real_T pData_idx_2_p;
+real_T pData_idx_4;
+real_T pData_idx_4_p;
+real_T pData_idx_5;
+real_T pData_idx_5_p;
+real_T pData_idx_6;
+real_T pData_idx_6_p;
+real_T pData_idx_7;
+real_T pData_idx_7_p;
+real_T pData_idx_8;
+real_T pData_idx_8_e;
+real_T pData_idx_8_p;
+%closefile localVarDecl
+%assign tlcSystemInitializeFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("SystemInitialize", 13, 2, 4, 1, 0)
+%<SLibGetRootInportsFromFile(system, TLC_TRUE)>
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+pData_idx_0 = mft3luzpor.SpacecraftDynamics_inertialPosition[0];
+pData_idx_1 = mft3luzpor.SpacecraftDynamics_inertialPosition[1];
+pData_idx_2 = mft3luzpor.SpacecraftDynamics_inertialPosition[2];
+pData_idx_0_p = mft3luzpor.SpacecraftDynamics_inertialVelocity[0];
+pData_idx_1_p = mft3luzpor.SpacecraftDynamics_inertialVelocity[1];
+pData_idx_2_p = mft3luzpor.SpacecraftDynamics_inertialVelocity[2];
+euler_idx_0 = mft3luzpor.SpacecraftDynamics_attitude[0] * 0.017453292519943295;
+euler_idx_1 = mft3luzpor.SpacecraftDynamics_attitude[1] * 0.017453292519943295;
+euler_idx_2 = mft3luzpor.SpacecraftDynamics_attitude[2] * 0.017453292519943295;
+pData_idx_4 = muDoubleScalarCos(euler_idx_2);
+pData_idx_7 = muDoubleScalarSin(euler_idx_2);
+pData_idx_5 = -muDoubleScalarSin(euler_idx_2);
+pData_idx_8 = muDoubleScalarCos(euler_idx_2);
+euler_idx_2 = muDoubleScalarCos(euler_idx_1);
+pData_idx_6 = -muDoubleScalarSin(euler_idx_1);
+pData_idx_2_e = muDoubleScalarSin(euler_idx_1);
+pData_idx_8_p = muDoubleScalarCos(euler_idx_1);
+pData_idx_0_e = euler_idx_2;
+pData_idx_0_e += 0.0 * pData_idx_2_e;
+pData_idx_6_p = pData_idx_6;
+pData_idx_6_p += 0.0 * pData_idx_8_p;
+euler_idx_1 = euler_idx_2 * 0.0;
+euler_idx_1 += 0.0 * pData_idx_4;
+euler_idx_1 += pData_idx_7 * pData_idx_2_e;
+pData_idx_4_p = pData_idx_4;
+pData_idx_4_p += pData_idx_7 * 0.0;
+pData_idx_7_p = pData_idx_6 * 0.0;
+pData_idx_7_p += pData_idx_4 * 0.0;
+pData_idx_7_p += pData_idx_7 * pData_idx_8_p;
+pData_idx_2_i = euler_idx_2 * 0.0;
+pData_idx_2_i += 0.0 * pData_idx_5;
+pData_idx_2_i += pData_idx_2_e * pData_idx_8;
+pData_idx_5_p = pData_idx_5;
+pData_idx_5_p += 0.0 * pData_idx_8;
+pData_idx_8_e = pData_idx_6 * 0.0;
+pData_idx_8_e += 0.0 * pData_idx_5;
+pData_idx_8_e += pData_idx_8 * pData_idx_8_p;
+euler_idx_2 = muDoubleScalarCos(euler_idx_0);
+pData_idx_8 = muDoubleScalarSin(euler_idx_0);
+pData_idx_5 = -muDoubleScalarSin(euler_idx_0);
+pData_idx_4 = muDoubleScalarCos(euler_idx_0);
+pData_idx_8_p = pData_idx_0_e * euler_idx_2;
+pData_idx_8_p += 0.0 * pData_idx_5;
+pData_idx_8_p += pData_idx_6_p * 0.0;
+euler_idx_0 = pData_idx_0_e * pData_idx_8;
+euler_idx_0 += 0.0 * pData_idx_4;
+euler_idx_0 += pData_idx_6_p * 0.0;
+pData_idx_6 = pData_idx_0_e * 0.0;
+pData_idx_6 += pData_idx_6_p;
+pData_idx_0_e = euler_idx_2 * euler_idx_1;
+pData_idx_0_e += pData_idx_5 * pData_idx_4_p;
+pData_idx_0_e += pData_idx_7_p * 0.0;
+pData_idx_6_p = pData_idx_8 * euler_idx_1;
+pData_idx_6_p += pData_idx_4_p * pData_idx_4;
+pData_idx_6_p += pData_idx_7_p * 0.0;
+pData_idx_7 = 0.0 * euler_idx_1;
+pData_idx_7 += pData_idx_4_p * 0.0;
+pData_idx_7 += pData_idx_7_p;
+pData_idx_2_e = euler_idx_2 * pData_idx_2_i;
+pData_idx_2_e += pData_idx_5 * pData_idx_5_p;
+pData_idx_2_e += 0.0 * pData_idx_8_e;
+pData_idx_5 = pData_idx_8 * pData_idx_2_i;
+pData_idx_5 += pData_idx_4 * pData_idx_5_p;
+pData_idx_5 += 0.0 * pData_idx_8_e;
+pData_idx_8 = 0.0 * pData_idx_2_i;
+pData_idx_8 += 0.0 * pData_idx_5_p;
+pData_idx_8 += pData_idx_8_e;
+if ((pData_idx_8_p + pData_idx_6_p) + pData_idx_8 > 0.0) {
+    euler_idx_2 = muDoubleScalarSqrt(((pData_idx_8_p + pData_idx_6_p) + pData_idx_8) + 1.0) * 0.5;
+    euler_idx_1 = (pData_idx_7 - pData_idx_5) / (muDoubleScalarSqrt(((pData_idx_8_p + pData_idx_6_p) + pData_idx_8) + 1.0) * 2.0);
+    pData_idx_2_i = (pData_idx_2_e - pData_idx_6) / (muDoubleScalarSqrt(((pData_idx_8_p + pData_idx_6_p) + pData_idx_8) + 1.0) * 2.0);
+    pData_idx_8 = (euler_idx_0 - pData_idx_0_e) / (muDoubleScalarSqrt(((pData_idx_8_p + pData_idx_6_p) + pData_idx_8) + 1.0) * 2.0);
+} else if ((pData_idx_6_p > pData_idx_8_p) && (pData_idx_6_p > pData_idx_8)) {
+    pData_idx_4 = muDoubleScalarSqrt(((pData_idx_6_p - pData_idx_8_p) - pData_idx_8) + 1.0);
+    pData_idx_2_i = 0.5 * pData_idx_4;
+    if (pData_idx_4 != 0.0) {
+        pData_idx_4 = 0.5 / pData_idx_4;
+    }
+    euler_idx_2 = (pData_idx_2_e - pData_idx_6) * pData_idx_4;
+    euler_idx_1 = (euler_idx_0 + pData_idx_0_e) * pData_idx_4;
+    pData_idx_8 = (pData_idx_7 + pData_idx_5) * pData_idx_4;
+} else if (pData_idx_8 > pData_idx_8_p) {
+    pData_idx_4 = muDoubleScalarSqrt(((pData_idx_8 - pData_idx_8_p) - pData_idx_6_p) + 1.0);
+    pData_idx_8 = 0.5 * pData_idx_4;
+    if (pData_idx_4 != 0.0) {
+        pData_idx_4 = 0.5 / pData_idx_4;
+    }
+    euler_idx_2 = (euler_idx_0 - pData_idx_0_e) * pData_idx_4;
+    euler_idx_1 = (pData_idx_6 + pData_idx_2_e) * pData_idx_4;
+    pData_idx_2_i = (pData_idx_7 + pData_idx_5) * pData_idx_4;
+} else {
+    pData_idx_4 = muDoubleScalarSqrt(((pData_idx_8_p - pData_idx_6_p) - pData_idx_8) + 1.0);
+    euler_idx_1 = 0.5 * pData_idx_4;
+    if (pData_idx_4 != 0.0) {
+        pData_idx_4 = 0.5 / pData_idx_4;
+    }
+    euler_idx_2 = (pData_idx_7 - pData_idx_5) * pData_idx_4;
+    pData_idx_2_i = (euler_idx_0 + pData_idx_0_e) * pData_idx_4;
+    pData_idx_8 = (pData_idx_6 + pData_idx_2_e) * pData_idx_4;
+}
+pData_idx_0_e = mft3luzpor.SpacecraftDynamics_attitudeRate[0] * 0.017453292519943295;
+pData_idx_5 = mft3luzpor.SpacecraftDynamics_attitudeRate[1] * 0.017453292519943295;
+pData_idx_2_e = mft3luzpor.SpacecraftDynamics_attitudeRate[2] * 0.017453292519943295;
+dzu2rlzxmw1.jici0zznxs = true;
+e0vrfmpfmv0.mhexdtzhzk[0] = pData_idx_0;
+e0vrfmpfmv0.mhexdtzhzk[1] = pData_idx_1;
+e0vrfmpfmv0.mhexdtzhzk[2] = pData_idx_2;
+e0vrfmpfmv0.mhexdtzhzk[3] = pData_idx_0_p;
+e0vrfmpfmv0.mhexdtzhzk[4] = pData_idx_1_p;
+e0vrfmpfmv0.mhexdtzhzk[5] = pData_idx_2_p;
+e0vrfmpfmv0.mhexdtzhzk[6] = euler_idx_2;
+e0vrfmpfmv0.mhexdtzhzk[7] = euler_idx_1;
+e0vrfmpfmv0.mhexdtzhzk[8] = pData_idx_2_i;
+e0vrfmpfmv0.mhexdtzhzk[9] = pData_idx_8;
+e0vrfmpfmv0.mhexdtzhzk[10] = pData_idx_0_e;
+e0vrfmpfmv0.mhexdtzhzk[11] = pData_idx_5;
+e0vrfmpfmv0.mhexdtzhzk[12] = pData_idx_2_e;
+dzu2rlzxmw1.f4rmvpbdz3 = mft3luzpor.UnitDelay_1_InitialCondition;
+dzu2rlzxmw1.fh5ftphg0m[0] = mft3luzpor.UnitDelay_2_InitialCondition;
+dzu2rlzxmw1.kbhqicyk4l[0] = mft3luzpor.UnitDelay_3_InitialCondition;
+dzu2rlzxmw1.b4smxiotvi[0] = mft3luzpor.UnitDelay_4_InitialCondition;
+dzu2rlzxmw1.ogqy5tyygw[0] = mft3luzpor.UnitDelay_5_InitialCondition;
+dzu2rlzxmw1.fh5ftphg0m[1] = mft3luzpor.UnitDelay_2_InitialCondition;
+dzu2rlzxmw1.kbhqicyk4l[1] = mft3luzpor.UnitDelay_3_InitialCondition;
+dzu2rlzxmw1.b4smxiotvi[1] = mft3luzpor.UnitDelay_4_InitialCondition;
+dzu2rlzxmw1.ogqy5tyygw[1] = mft3luzpor.UnitDelay_5_InitialCondition;
+dzu2rlzxmw1.fh5ftphg0m[2] = mft3luzpor.UnitDelay_2_InitialCondition;
+dzu2rlzxmw1.kbhqicyk4l[2] = mft3luzpor.UnitDelay_3_InitialCondition;
+dzu2rlzxmw1.b4smxiotvi[2] = mft3luzpor.UnitDelay_4_InitialCondition;
+dzu2rlzxmw1.ogqy5tyygw[2] = mft3luzpor.UnitDelay_5_InitialCondition;
+dzu2rlzxmw1.j14yp52ocn[0] = mft3luzpor.UnitDelay_6_InitialCondition;
+dzu2rlzxmw1.c0bj1oc2wt[0] = mft3luzpor.UnitDelay_7_InitialCondition;
+dzu2rlzxmw1.j14yp52ocn[1] = mft3luzpor.UnitDelay_6_InitialCondition;
+dzu2rlzxmw1.c0bj1oc2wt[1] = mft3luzpor.UnitDelay_7_InitialCondition;
+dzu2rlzxmw1.j14yp52ocn[2] = mft3luzpor.UnitDelay_6_InitialCondition;
+dzu2rlzxmw1.c0bj1oc2wt[2] = mft3luzpor.UnitDelay_7_InitialCondition;
+dzu2rlzxmw1.j14yp52ocn[3] = mft3luzpor.UnitDelay_6_InitialCondition;
+dzu2rlzxmw1.c0bj1oc2wt[3] = mft3luzpor.UnitDelay_7_InitialCondition;
+dzu2rlzxmw1.ew4njikxui[0] = mft3luzpor.UnitDelay_8_InitialCondition;
+dzu2rlzxmw1.mi2xldk4lh[0] = mft3luzpor.UnitDelay_9_InitialCondition;
+dzu2rlzxmw1.ew4njikxui[1] = mft3luzpor.UnitDelay_8_InitialCondition;
+dzu2rlzxmw1.mi2xldk4lh[1] = mft3luzpor.UnitDelay_9_InitialCondition;
+dzu2rlzxmw1.ew4njikxui[2] = mft3luzpor.UnitDelay_8_InitialCondition;
+dzu2rlzxmw1.mi2xldk4lh[2] = mft3luzpor.UnitDelay_9_InitialCondition;
+dzu2rlzxmw1.ke5boprrrr = mft3luzpor.UnitDelay_10_InitialCondition;
+dzu2rlzxmw1.fzzym3qtt1 = mft3luzpor.UnitDelay_11_InitialCondition;
+%<tlcSystemInitializeFcnOfS13B2>\
+ktuiv5qnvo2.a00doxjmna[0] = mft3luzpor.Merge_InitialOutput[0];
+ktuiv5qnvo2.a00doxjmna[1] = mft3luzpor.Merge_InitialOutput[1];
+ktuiv5qnvo2.a00doxjmna[2] = mft3luzpor.Merge_InitialOutput[2];
+ktuiv5qnvo2.a00doxjmna[3] = mft3luzpor.Merge_InitialOutput[3];
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 1, fcnProtoType)>
+%endfunction

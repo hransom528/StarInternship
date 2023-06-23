@@ -1,0 +1,96 @@
+%implements s17_b0_5lysi_ZeroCrossings "C"
+
+%function ZeroCrossings(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+ko5zfiqifu *_rtZCSV;
+real_T maxV;
+real_T tmp;
+%closefile localVarDecl
+%<SLibCG_TrackZCSV(13)>\
+_rtZCSV = %<(SLibCG_SE(SLibGetZCSignalValueStrucPtr()))>;
+_rtZCSV->kifixhef2v = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax[0];
+_rtZCSV->nlevwdgdtq = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax[1];
+_rtZCSV->itquqs5fu3 = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax_g0fnktg5hy[0];
+_rtZCSV->c5tnygmrha = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax_g0fnktg5hy[1];
+_rtZCSV->p1daz2c5wj = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax_kymaumun3y[0];
+_rtZCSV->mtdj10k4d1 = ktuiv5qnvo2.arexm4bnfq - mft3luzpor.CheckdeltaT_minmax_kymaumun3y[1];
+_rtZCSV->cwpuhcrgpi = 0.0;
+if (ktuiv5qnvo2.infjo0hum0 > 0.0) {
+    _rtZCSV->cwpuhcrgpi = 1.0;
+}
+%<SLibCGIRZeroOutZeroCrossingsForSystemAndModelRef(13, 13, 9)>\
+if (dzu2rlzxmw1.gzwsybef1l == 1) {
+    _rtZCSV->bk305wltlm[0] = 0.0;
+    _rtZCSV->bk305wltlm[1] = 0.0;
+    if ((ktuiv5qnvo2.gdkoorrli3[4] > ktuiv5qnvo2.gdkoorrli3[0]) && (ktuiv5qnvo2.gdkoorrli3[4] > ktuiv5qnvo2.gdkoorrli3[8])) {
+        _rtZCSV->bk305wltlm[0] = 1.0;
+    } else if (ktuiv5qnvo2.gdkoorrli3[8] > ktuiv5qnvo2.gdkoorrli3[0]) {
+        _rtZCSV->bk305wltlm[1] = 1.0;
+    }
+%<SLibCGIRZeroOutZeroCrossingsForSystemAndModelRef(7, 7, 0)>\
+    if (dzu2rlzxmw1.jwmfebhkdp == 0) {
+        _rtZCSV->gogagl0ey4 = ktuiv5qnvo2.bl1ublhpfw;
+    }
+%<SLibCGIRZeroOutZeroCrossingsForSystemAndModelRef(7, 7, 1)>\
+    if (dzu2rlzxmw1.jwmfebhkdp == 1) {
+        _rtZCSV->bstbqwqb4y = ktuiv5qnvo2.f4snyiph1p;
+    }
+%<SLibCGIRZeroOutZeroCrossingsForSystemAndModelRef(7, 7, 2)>\
+    if (dzu2rlzxmw1.jwmfebhkdp == 2) {
+        _rtZCSV->gidzmbwww0 = ktuiv5qnvo2.h0ayrtgqgn;
+    }
+}
+if ((mft3luzpor.Constant1_Value_lj35wik0h0 != mft3luzpor.Constant1_Value_lj35wik0h0) || (ktuiv5qnvo2.mtcu1gi2bm > mft3luzpor.Constant1_Value_lj35wik0h0)) {
+    if (dzu2rlzxmw1.anodop3bfa == 0) {
+        _rtZCSV->flp13ut5c1 = ktuiv5qnvo2.mtcu1gi2bm - ktuiv5qnvo2.mtcu1gi2bm;
+    } else {
+        _rtZCSV->flp13ut5c1 = ktuiv5qnvo2.mtcu1gi2bm - mft3luzpor.Constant1_Value_lj35wik0h0;
+    }
+} else if (dzu2rlzxmw1.anodop3bfa == 0) {
+    _rtZCSV->flp13ut5c1 = mft3luzpor.Constant1_Value_lj35wik0h0 - ktuiv5qnvo2.mtcu1gi2bm;
+} else {
+    _rtZCSV->flp13ut5c1 = mft3luzpor.Constant1_Value_lj35wik0h0 - mft3luzpor.Constant1_Value_lj35wik0h0;
+}
+maxV = ktuiv5qnvo2.nkts1zw0nd[0];
+tmp = maxV;
+if ((maxV != maxV) || (mft3luzpor.Constant_Value_f1uqwlg30t > maxV)) {
+    maxV = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+if (dzu2rlzxmw1.fg4e4z0egr[0] == 1) {
+    tmp = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+_rtZCSV->jb41bpfar1[0] = maxV - tmp;
+maxV = ktuiv5qnvo2.nkts1zw0nd[1];
+tmp = maxV;
+if ((maxV != maxV) || (mft3luzpor.Constant_Value_f1uqwlg30t > maxV)) {
+    maxV = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+if (dzu2rlzxmw1.fg4e4z0egr[1] == 1) {
+    tmp = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+_rtZCSV->jb41bpfar1[1] = maxV - tmp;
+maxV = ktuiv5qnvo2.nkts1zw0nd[2];
+tmp = maxV;
+if ((maxV != maxV) || (mft3luzpor.Constant_Value_f1uqwlg30t > maxV)) {
+    maxV = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+if (dzu2rlzxmw1.fg4e4z0egr[2] == 1) {
+    tmp = mft3luzpor.Constant_Value_f1uqwlg30t;
+}
+_rtZCSV->jb41bpfar1[2] = maxV - tmp;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedZeroCrossingLocalVars", localVarDecl)>
+%endfunction
+%function ZeroCrossingsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ZeroCrossings(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 8, fcnProtoType)>
+%endfunction

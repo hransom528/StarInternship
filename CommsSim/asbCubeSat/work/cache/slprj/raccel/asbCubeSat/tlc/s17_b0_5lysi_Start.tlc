@@ -1,0 +1,322 @@
+%implements s17_b0_5lysi_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%assign tlcSetupRuntimeResourcesFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("SetupRuntimeResources", 13, 2, 4, 0, 0)
+%assign tlcStartFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("Start", 13, 2, 4, 0, 1)
+%assign tlcStartFcnOfS13B1 = OpaqueTLCBlockFcn("Start", 13, 1, 4, 0, 2)
+%<tlcSetupRuntimeResourcesFcnOfS13B2>\
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+dzu2rlzxmw1.c3ovqbbxtp = -1;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+dzu2rlzxmw1.nhnftpzwqv = -1;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(12, 0, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+switch (dzu2rlzxmw1.nhnftpzwqv) {
+  case 0:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+    break;
+  case 1:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+    break;
+}
+dzu2rlzxmw1.nhnftpzwqv = -1;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(12, 1, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+switch (dzu2rlzxmw1.c3ovqbbxtp) {
+  case 0:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+    break;
+  case 1:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+    break;
+}
+dzu2rlzxmw1.c3ovqbbxtp = -1;
+dzu2rlzxmw1.o2jni4uypc = -1;
+dzu2rlzxmw1.nggkabx0mf = 0;
+dzu2rlzxmw1.jnmhg3kfyb = 0;
+dzu2rlzxmw1.cqhfzkqvew = 0;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 0, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 1, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 2, 1)>\
+dzu2rlzxmw1.jwmfebhkdp = -1;
+dzu2rlzxmw1.hehcr1ojvh = 0;
+%<tlcStartFcnOfS13B2>\
+%<tlcStartFcnOfS13B1>\
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("p0jh2umvpc",1,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("p0jh2umvpc", ["%<_modelSS>"], 1, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[1]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[2], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("coytytvmiv",2,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("coytytvmiv", ["%<_modelSS>"], 2, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[2]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+dzu2rlzxmw1.np350cmfgt = -1;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("p0jh2umvpc",1,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("p0jh2umvpc", ["%<_modelSS>"], 1, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[1]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[2], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("coytytvmiv",2,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("coytytvmiv", ["%<_modelSS>"], 2, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[2]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+dzu2rlzxmw1.pq1kuxnyvo = -1;
+dzu2rlzxmw1.oep1m0ng2h = 0;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(13, 7, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+switch (dzu2rlzxmw1.o2jni4uypc) {
+  case 0:
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(12, 0, 1)>\
+    %<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+    switch (dzu2rlzxmw1.nhnftpzwqv) {
+      case 0:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        break;
+      case 1:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("cqvdyxqb5g",8,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("cqvdyxqb5g", ["%<_modelSS>"], 8, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        break;
+    }
+    dzu2rlzxmw1.nhnftpzwqv = -1;
+    break;
+  case 1:
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(12, 1, 1)>\
+    %<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+    switch (dzu2rlzxmw1.c3ovqbbxtp) {
+      case 0:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 0, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        break;
+      case 1:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[10], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("nvjygc22lj",10,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nvjygc22lj", ["%<_modelSS>"], 10, 1, 14, 0, 0, 13)>\
+%assign ss = ::CompiledModel.System[10]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        break;
+    }
+    dzu2rlzxmw1.c3ovqbbxtp = -1;
+    break;
+}
+dzu2rlzxmw1.o2jni4uypc = -1;
+dzu2rlzxmw1.lfr0buot3d = -1;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(13, 8, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(13, 9, 1)>\
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+switch (dzu2rlzxmw1.jwmfebhkdp) {
+  case 0:
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 0, 1)>\
+    break;
+  case 1:
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 1, 1)>\
+    break;
+  case 2:
+%<SLibCGIRSetStatesDisabledForSubsystemAndModelRef(7, 2, 1)>\
+    break;
+}
+dzu2rlzxmw1.jwmfebhkdp = -1;
+dzu2rlzxmw1.gzwsybef1l = -1;
+dzu2rlzxmw1.nkmv45wa3j = 0;
+dzu2rlzxmw1.gqb3wumnnb = 0;
+dzu2rlzxmw1.g54ohlxfz0 = 0;
+dzu2rlzxmw1.j31ckjze2x = 0;
+dzu2rlzxmw1.pwrrdllj3z = 0;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 0, fcnProtoType)>
+%endfunction

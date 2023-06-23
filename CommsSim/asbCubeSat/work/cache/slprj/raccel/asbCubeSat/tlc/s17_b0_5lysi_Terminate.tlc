@@ -1,0 +1,23 @@
+%implements s17_b0_5lysi_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("Terminate", 13, 2, 4, 9, 0)
+%assign tlcTerminateFcnOfS13B1 = OpaqueTLCBlockFcn("Terminate", 13, 1, 4, 9, 1)
+%assign tlcCleanupRuntimeResourcesFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("CleanupRuntimeResources", 13, 2, 4, 9, 2)
+%<tlcTerminateFcnOfS13B2>\
+%<tlcTerminateFcnOfS13B1>\
+%<tlcCleanupRuntimeResourcesFcnOfS13B2>\
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 9, fcnProtoType)>
+%endfunction

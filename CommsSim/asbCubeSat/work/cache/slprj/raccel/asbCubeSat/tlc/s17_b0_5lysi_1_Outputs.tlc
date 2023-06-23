@@ -1,0 +1,45 @@
+%implements s17_b0_5lysi_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibGenerateExtModeOutput(system)>
+*mvr2cth2sd = gohcenjyrw;
+*kgycvxynrs = nepsfibfq0;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(1, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void enr11s3r13(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<comma>%<::tSimStructType> *rtS_e\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("enr11s3r13", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>real_T gohcenjyrw\
+%assign comma = ", "
+%<comma>real_T nepsfibfq0\
+%assign comma = ", "
+%<comma>real_T *mvr2cth2sd\
+%assign comma = ", "
+%<comma>real_T *kgycvxynrs\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%endfunction

@@ -1,0 +1,41 @@
+%implements s17_b0_5lysi_Projection "C"
+
+%function Projection(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T pData_idx_0;
+real_T pData_idx_0_p;
+real_T pData_idx_1;
+real_T pData_idx_1_p;
+real_T pData_idx_2;
+real_T pData_idx_2_p;
+real_T pData_idx_3;
+%closefile localVarDecl
+%<SLibInsertMdlOutputForProjectionFcn(system)>
+pData_idx_0 = e0vrfmpfmv0.mhexdtzhzk[6];
+pData_idx_1 = e0vrfmpfmv0.mhexdtzhzk[7];
+pData_idx_2 = e0vrfmpfmv0.mhexdtzhzk[8];
+pData_idx_3 = e0vrfmpfmv0.mhexdtzhzk[9];
+pData_idx_0_p = 1.0 / muDoubleScalarSqrt(((pData_idx_0 * pData_idx_0 + pData_idx_1 * pData_idx_1) + pData_idx_2 * pData_idx_2) + pData_idx_3 * pData_idx_3) * pData_idx_0;
+pData_idx_1_p = 1.0 / muDoubleScalarSqrt(((pData_idx_0 * pData_idx_0 + pData_idx_1 * pData_idx_1) + pData_idx_2 * pData_idx_2) + pData_idx_3 * pData_idx_3) * pData_idx_1;
+pData_idx_2_p = 1.0 / muDoubleScalarSqrt(((pData_idx_0 * pData_idx_0 + pData_idx_1 * pData_idx_1) + pData_idx_2 * pData_idx_2) + pData_idx_3 * pData_idx_3) * pData_idx_2;
+pData_idx_3 *= 1.0 / muDoubleScalarSqrt(((pData_idx_0 * pData_idx_0 + pData_idx_1 * pData_idx_1) + pData_idx_2 * pData_idx_2) + pData_idx_3 * pData_idx_3);
+e0vrfmpfmv0.mhexdtzhzk[6] = pData_idx_0_p;
+e0vrfmpfmv0.mhexdtzhzk[7] = pData_idx_1_p;
+e0vrfmpfmv0.mhexdtzhzk[8] = pData_idx_2_p;
+e0vrfmpfmv0.mhexdtzhzk[9] = pData_idx_3;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedProjectionLocalVars", localVarDecl)>
+%endfunction
+%function ProjectionFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Projection(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 6, fcnProtoType)>
+%endfunction

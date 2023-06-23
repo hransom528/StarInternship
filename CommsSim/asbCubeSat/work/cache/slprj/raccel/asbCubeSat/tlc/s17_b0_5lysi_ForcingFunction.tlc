@@ -1,0 +1,73 @@
+%implements s17_b0_5lysi_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+inbmaj2xsz *_rtXdot;
+real_T pData_idx_0;
+real_T pData_idx_0_e;
+real_T pData_idx_0_i;
+real_T pData_idx_0_p;
+real_T pData_idx_1;
+real_T pData_idx_1_e;
+real_T pData_idx_1_i;
+real_T pData_idx_1_p;
+real_T pData_idx_2;
+real_T pData_idx_2_e;
+real_T pData_idx_2_i;
+real_T pData_idx_2_p;
+real_T pData_idx_3;
+%closefile localVarDecl
+_rtXdot = %<(SLibCG_SE(SLibGetContStatesDerivativeStructPtr()))>;
+pData_idx_0 = e0vrfmpfmv0.mhexdtzhzk[3];
+pData_idx_1 = e0vrfmpfmv0.mhexdtzhzk[4];
+pData_idx_2 = e0vrfmpfmv0.mhexdtzhzk[5];
+pData_idx_0_p = e0vrfmpfmv0.mhexdtzhzk[6];
+pData_idx_1_p = e0vrfmpfmv0.mhexdtzhzk[7];
+pData_idx_2_p = e0vrfmpfmv0.mhexdtzhzk[8];
+pData_idx_3 = e0vrfmpfmv0.mhexdtzhzk[9];
+pData_idx_0_e = e0vrfmpfmv0.mhexdtzhzk[10];
+pData_idx_1_e = e0vrfmpfmv0.mhexdtzhzk[11];
+pData_idx_2_e = e0vrfmpfmv0.mhexdtzhzk[12];
+pData_idx_0_i = (-pData_idx_0_e * pData_idx_1_p + -pData_idx_1_e * pData_idx_2_p) + -pData_idx_2_e * pData_idx_3;
+pData_idx_1_i = (pData_idx_0_e * pData_idx_0_p + pData_idx_2_p * pData_idx_2_e) - pData_idx_1_e * pData_idx_3;
+pData_idx_2_i = (pData_idx_0_p * pData_idx_1_e - pData_idx_1_p * pData_idx_2_e) + pData_idx_0_e * pData_idx_3;
+pData_idx_3 = (pData_idx_0_p * pData_idx_2_e + pData_idx_1_p * pData_idx_1_e) - pData_idx_0_e * pData_idx_2_p;
+pData_idx_0_p = pData_idx_0_i * 0.5;
+pData_idx_1_p = pData_idx_1_i * 0.5;
+pData_idx_2_p = pData_idx_2_i * 0.5;
+pData_idx_3 *= 0.5;
+pData_idx_0_e = dzu2rlzxmw1.du2milvecl[0];
+pData_idx_1_e = dzu2rlzxmw1.du2milvecl[1];
+pData_idx_2_e = dzu2rlzxmw1.du2milvecl[2];
+pData_idx_0_i = dzu2rlzxmw1.iqedkgi5kk[0];
+pData_idx_1_i = dzu2rlzxmw1.iqedkgi5kk[1];
+pData_idx_2_i = dzu2rlzxmw1.iqedkgi5kk[2];
+_rtXdot->mhexdtzhzk[0] = pData_idx_0;
+_rtXdot->mhexdtzhzk[1] = pData_idx_1;
+_rtXdot->mhexdtzhzk[2] = pData_idx_2;
+_rtXdot->mhexdtzhzk[3] = pData_idx_0_e;
+_rtXdot->mhexdtzhzk[4] = pData_idx_1_e;
+_rtXdot->mhexdtzhzk[5] = pData_idx_2_e;
+_rtXdot->mhexdtzhzk[6] = pData_idx_0_p;
+_rtXdot->mhexdtzhzk[7] = pData_idx_1_p;
+_rtXdot->mhexdtzhzk[8] = pData_idx_2_p;
+_rtXdot->mhexdtzhzk[9] = pData_idx_3;
+_rtXdot->mhexdtzhzk[10] = pData_idx_0_i;
+_rtXdot->mhexdtzhzk[11] = pData_idx_1_i;
+_rtXdot->mhexdtzhzk[12] = pData_idx_2_i;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedForcingFunctionLocalVars", localVarDecl)>
+%endfunction
+%function ForcingFunctionFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ForcingFunction(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 7, fcnProtoType)>
+%endfunction

@@ -1,0 +1,66 @@
+%implements s17_b0_5lysi_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcUpdateFcnOfS13B2 = OpaqueTLCBlockFcnForMdlRef("Update", 13, 2, 4, 4, 0)
+if (%<(SLibCGIRIsSampleHit(2, 13))>) {
+    dzu2rlzxmw1.f4rmvpbdz3 = ktuiv5qnvo2.n2legnbe3a;
+    dzu2rlzxmw1.fh5ftphg0m[0] = ktuiv5qnvo2.guuurijbhk[0];
+    dzu2rlzxmw1.kbhqicyk4l[0] = ktuiv5qnvo2.iw0ifexhed[0];
+    dzu2rlzxmw1.b4smxiotvi[0] = ktuiv5qnvo2.mbegyyvbpy[0];
+    dzu2rlzxmw1.ogqy5tyygw[0] = ktuiv5qnvo2.opqiir1dtt[0];
+    dzu2rlzxmw1.fh5ftphg0m[1] = ktuiv5qnvo2.guuurijbhk[1];
+    dzu2rlzxmw1.kbhqicyk4l[1] = ktuiv5qnvo2.iw0ifexhed[1];
+    dzu2rlzxmw1.b4smxiotvi[1] = ktuiv5qnvo2.mbegyyvbpy[1];
+    dzu2rlzxmw1.ogqy5tyygw[1] = ktuiv5qnvo2.opqiir1dtt[1];
+    dzu2rlzxmw1.fh5ftphg0m[2] = ktuiv5qnvo2.guuurijbhk[2];
+    dzu2rlzxmw1.kbhqicyk4l[2] = ktuiv5qnvo2.iw0ifexhed[2];
+    dzu2rlzxmw1.b4smxiotvi[2] = ktuiv5qnvo2.mbegyyvbpy[2];
+    dzu2rlzxmw1.ogqy5tyygw[2] = ktuiv5qnvo2.opqiir1dtt[2];
+    dzu2rlzxmw1.j14yp52ocn[0] = ktuiv5qnvo2.a00doxjmna[0];
+    dzu2rlzxmw1.j14yp52ocn[1] = ktuiv5qnvo2.a00doxjmna[1];
+    dzu2rlzxmw1.j14yp52ocn[2] = ktuiv5qnvo2.a00doxjmna[2];
+    dzu2rlzxmw1.j14yp52ocn[3] = ktuiv5qnvo2.a00doxjmna[3];
+    dzu2rlzxmw1.c0bj1oc2wt[0] = ktuiv5qnvo2.ppg2zfkz0x;
+    dzu2rlzxmw1.c0bj1oc2wt[1] = ktuiv5qnvo2.myx23yxhrh;
+    dzu2rlzxmw1.c0bj1oc2wt[2] = ktuiv5qnvo2.dfvrnjcz5k;
+    dzu2rlzxmw1.c0bj1oc2wt[3] = ktuiv5qnvo2.awoxnmunon;
+    dzu2rlzxmw1.ew4njikxui[0] = ktuiv5qnvo2.pk5pkkw0ge[0];
+    dzu2rlzxmw1.ew4njikxui[1] = ktuiv5qnvo2.pk5pkkw0ge[1];
+    dzu2rlzxmw1.ew4njikxui[2] = ktuiv5qnvo2.pk5pkkw0ge[2];
+    dzu2rlzxmw1.mi2xldk4lh[0] = ktuiv5qnvo2.euuuevzxu5[0];
+    dzu2rlzxmw1.mi2xldk4lh[1] = ktuiv5qnvo2.euuuevzxu5[1];
+    dzu2rlzxmw1.mi2xldk4lh[2] = ktuiv5qnvo2.extyfnt5r4;
+    dzu2rlzxmw1.ke5boprrrr = ktuiv5qnvo2.mambpjcdh4;
+    dzu2rlzxmw1.fzzym3qtt1 = ktuiv5qnvo2.aqwddl53gj;
+%<tlcUpdateFcnOfS13B2>\
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 3
+%assign ::GlobalCurrentTID = 3
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function UpdateFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 4, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 3
+%assign ::GlobalCurrentTID = 3
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

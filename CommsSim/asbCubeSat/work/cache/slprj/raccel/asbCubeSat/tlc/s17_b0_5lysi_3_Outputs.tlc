@@ -1,0 +1,35 @@
+%implements s17_b0_5lysi_3_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibGenerateExtModeOutput(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[3].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(3, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(3, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(3, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void dmj10vcnym(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(3, 0, 0)
+%<comma>%<::tSimStructType> *rtS_c\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("dmj10vcnym", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 0, fcnProtoType)>
+%endfunction

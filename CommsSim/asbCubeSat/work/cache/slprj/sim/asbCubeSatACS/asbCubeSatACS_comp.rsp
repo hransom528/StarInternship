@@ -1,0 +1,8 @@
+﻿-IC:\Users\jaart\Documents\MATLAB\Sim\asbCubeSat\work\cache
+-IC:\Users\jaart\Documents\MATLAB\Sim\asbCubeSat\work\cache\slprj\sim\asbCubeSatACS
+-I"C:\Program Files\MATLAB\R2023a\extern\include"
+-I"C:\Program Files\MATLAB\R2023a\simulink\include"
+-I"C:\Program Files\MATLAB\R2023a\rtw\c\src"
+-I"C:\Program Files\MATLAB\R2023a\rtw\c\src\ext_mode\common"
+-I"C:\Program Files\MATLAB\R2023a\rtw\c\ert"
+-IC:\Users\jaart\Documents\MATLAB\Sim\asbCubeSat\work\cache\slprj\sim\_sharedutils
