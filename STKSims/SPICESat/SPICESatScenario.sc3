@@ -221,16 +221,6 @@ BEGIN SceneWindow
                 ShowPenumbraCone		 No
                 ShowPenumbraLimit		 No
                 ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINCALLDATA "USER"
-                    AgiTrnSvr		 "world"
-                    AltOffset		 0
-                    AltScale		 1
-                    TerrainTilerID		 ""
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
                 _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
                     BlendMode		 Value
                     BlendFactor		 1
@@ -240,19 +230,6 @@ BEGIN SceneWindow
                     BlendAltitudeUpperAltitude		 100000
                     TextureRole		 Day
                     URI		 "file:///Earth_PE_b.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "USER"
-                    BlendMode		 Altitude
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    URI		 "virtual_earth://virtualearth.net/Aerial.ve"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -410,11 +387,6 @@ BEGIN SceneWindow
         isShowingOverlay		 Yes
         BEGIN Overlays
             BEGIN Overlay
-                OverlayReserveId		 1
-                BorderAttachTypeX		 Max
-                BorderAttachTypeY		 Max
-            END
-            BEGIN Overlay
                 URI		 "file:///AGI_logo.png"
                 Show		 Yes
                 X		 0
@@ -470,7 +442,7 @@ BEGIN SceneWindow
         GridDisplayColor		 #00ff00
         GridVertTextAlign		 Border        IsShowingPickAnnotation		 Yes
         UsePickAnnoPosition		 No
-        PickAnnoPosition		 282 191
+        PickAnnoPosition		 822 311
         PickAttachX		 Min
         PickAttachY		 Min
         PickAnnoFontSize		 1
@@ -729,22 +701,22 @@ BEGIN SceneWindow
             UseLayer		 Yes
             FromName		 "Satellite/SPICESat"
             FromRegPosAttView		 "Point"
-            FromPosition		  6.7910390913984990e+06 -3.6629425725026958e+04 -1.5892234357983309e+04
-            FromOffset		  1.9373437008820474e+01 -2.3225583779494627e+01  1.1511694423486915e+01
-            FromOffsetLLR		  6.4560176569534855e-01  1.7879856201243365e+00  3.2361658052899564e+01
+            FromPosition		  5.0719876207525772e+05  4.2549660256460328e+06  5.2685457949600583e+06
+            FromOffset		 -2.9816105980426073e+00  2.6295219352468848e+00  1.4422968961298466e-02
+            FromOffsetLLR		  3.6957406740649312e-01 -5.6019137564704935e-01  3.9754993885470764e+00
             ToName		 "Satellite/SPICESat"
             ToRegPosAttView		 "Point"
-            ToPosition		  6.7910197179614902e+06 -3.6606200141247464e+04 -1.5903746052406796e+04
+            ToPosition		  5.0720174368585576e+05  4.2549633961240975e+06  5.2685457805370893e+06
             ToOffset		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
             ToOffsetLLR		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
             ConstantDistanceType		 None
             ConstantDistanceValue		 1
-            UpVector		  8.0099504325301896e-01  5.3387709691668317e-01 -2.7089146548370480e-01
-            ViewRad		  3.2361658052996987e+01
-            ViewQuat		  7.3931392355588965e-01  1.9867877370204551e-01  2.4730107973917764e-01 -5.9395609541150807e-01
+            UpVector		  3.7062222328735556e-01  4.1569226449264546e-01  8.3056553555183976e-01
+            ViewRad		  3.9754993885398706e+00
+            ViewQuat		  2.7174119939192409e-01 -1.7657677293938703e-01  5.0793708740470712e-02  9.4466785854274682e-01
             ViewCoordSystem		 From
             ViewFromToMode		 FromTo
-            ViewToCBIMtx		  5.2122934053909220e-03  6.2934167813517528e-01  7.7711124310452373e-01 -2.7150386553465577e-03 -7.7711002884539782e-01  6.2935890526233562e-01  9.9998273013215422e-01 -5.3902903360561472e-03 -2.3418384950563698e-03
+            ViewToCBIMtx		 -9.9697790177791223e-01  6.3593731856426444e-02  4.4619509579161144e-02 -2.1379646387391267e-02 -7.7678521442885595e-01  6.2940260673520143e-01  7.4685835918613303e-02  6.2654654089962825e-01  7.7579730471293129e-01
             UseUpAxis		 Yes
             UpAxisType		 Z
             UserDefinedUpAxis		  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00
@@ -755,7 +727,7 @@ BEGIN SceneWindow
             MinAngleToUpAxis		  8.7266462599716477e-03
             InitUpAxisUp		 Yes
             TempUpAxisUp		 Yes
-            CrossAxis		  9.7650697315278001e-01  2.1548580320753380e-01 -0.0000000000000000e+00
+            CrossAxis		 -5.3134833216484378e-01 -8.4715343941085375e-01  0.0000000000000000e+00
             DefaultOffset		  1.9398577511310577e+00
             BaseDefaultOffset		  1.5518862009048462e+00
         END View

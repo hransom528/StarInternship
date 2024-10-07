@@ -1,30 +1,30 @@
 stk.v.12.0
 WrittenBy    STK_v12.6.0
 
-BEGIN Receiver
+BEGIN Transmitter
 
-    Name		 SBandReceiver
+    Name		 UHFTransmitter
 <?xml version = "1.0" standalone = "yes"?>
 <SCOPE>
     <VAR name = "Model">
-        <VAR name = "Simple_Receiver_Model">
+        <VAR name = "Simple_Transmitter_Model">
             <SCOPE Class = "LinkEmbedControl">
                 <VAR name = "ReferenceType">
                     <STRING>&quot;Unlinked&quot;</STRING>
                 </VAR>
                 <VAR name = "Component">
-                    <VAR name = "Simple_Receiver_Model">
-                        <SCOPE Class = "Receiver">
+                    <VAR name = "Simple_Transmitter_Model">
+                        <SCOPE Class = "Transmitter">
                             <VAR name = "Version">
-                                <STRING>&quot;1.0.0 a&quot;</STRING>
+                                <STRING>&quot;1.0.1 a&quot;</STRING>
                             </VAR>
                             <VAR name = "IdentifierInformation">
                                 <SCOPE>
                                     <VAR name = "Identifier">
-                                        <STRING>&quot;{B2E22C4D-1CA4-4C5D-82FF-0A483E7479C5}&quot;</STRING>
+                                        <STRING>&quot;{BE2B9441-4190-43DE-8B07-F0D459972C66}&quot;</STRING>
                                     </VAR>
                                     <VAR name = "Version">
-                                        <STRING>&quot;2&quot;</STRING>
+                                        <STRING>&quot;3&quot;</STRING>
                                     </VAR>
                                     <VAR name = "SdfInformation">
                                         <SCOPE>
@@ -39,7 +39,7 @@ BEGIN Receiver
                                     <VAR name = "SourceIdentifierInformation">
                                         <SCOPE>
                                             <VAR name = "Identifier">
-                                                <STRING>&quot;{8C5599E1-888B-4ECD-8D58-ADA37349CED5}&quot;</STRING>
+                                                <STRING>&quot;{4F5DC4F5-AA23-4B92-8366-0448311074C0}&quot;</STRING>
                                             </VAR>
                                             <VAR name = "Version">
                                                 <STRING>&quot;1&quot;</STRING>
@@ -59,16 +59,16 @@ BEGIN Receiver
                                 </SCOPE>
                             </VAR>
                             <VAR name = "ComponentName">
-                                <STRING>&quot;Simple_Receiver_Model&quot;</STRING>
+                                <STRING>&quot;Simple_Transmitter_Model&quot;</STRING>
                             </VAR>
                             <VAR name = "Description">
-                                <STRING>&quot;Simple model of a receiver&quot;</STRING>
+                                <STRING>&quot;Simple model of a transmitter&quot;</STRING>
                             </VAR>
                             <VAR name = "Type">
-                                <STRING>&quot;Simple Receiver Model&quot;</STRING>
+                                <STRING>&quot;Simple Transmitter Model&quot;</STRING>
                             </VAR>
                             <VAR name = "UserComment">
-                                <STRING>&quot;Simple model of a receiver&quot;</STRING>
+                                <STRING>&quot;Simple model of a transmitter&quot;</STRING>
                             </VAR>
                             <VAR name = "ReadOnly">
                                 <BOOL>false</BOOL>
@@ -78,21 +78,6 @@ BEGIN Receiver
                             </VAR>
                             <VAR name = "Category">
                                 <STRING>&quot;&quot;</STRING>
-                            </VAR>
-                            <VAR name = "AutoSelectDemodulator">
-                                <BOOL>false</BOOL>
-                            </VAR>
-                            <VAR name = "Demodulator">
-                                <VAR name = "QPSK">
-                                    <SCOPE Class = "Demodulator">
-                                        <VAR name = "ComponentName">
-                                            <STRING>&quot;QPSK&quot;</STRING>
-                                        </VAR>
-                                        <VAR name = "Type">
-                                            <STRING>&quot;QPSK&quot;</STRING>
-                                        </VAR>
-                                    </SCOPE>
-                                </VAR>
                             </VAR>
                             <VAR name = "UseFilter">
                                 <BOOL>false</BOOL>
@@ -112,7 +97,7 @@ BEGIN Receiver
                                                     <VAR name = "IdentifierInformation">
                                                         <SCOPE>
                                                             <VAR name = "Identifier">
-                                                                <STRING>&quot;{55BD279F-98AB-41A9-A5B8-EB49D7042F67}&quot;</STRING>
+                                                                <STRING>&quot;{926C900B-4EB1-43FD-971C-FCDA798E8AF7}&quot;</STRING>
                                                             </VAR>
                                                             <VAR name = "Version">
                                                                 <STRING>&quot;1&quot;</STRING>
@@ -199,87 +184,97 @@ BEGIN Receiver
                                     </SCOPE>
                                 </VAR>
                             </VAR>
-                            <VAR name = "Bandwidth">
-                                <QUANTITY Dimension = "BandwidthUnit" Unit = "Hz">
-                                    <REAL>2000</REAL>
-                                </QUANTITY>
-                            </VAR>
-                            <VAR name = "AutoScaleBandwidth">
-                                <BOOL>true</BOOL>
-                            </VAR>
-                            <VAR name = "PreReceiveGainsLosses">
+                            <VAR name = "PostTransmitGainsLosses">
                                 <SCOPE>
                                     <VAR name = "GainLossList">
                                         <LIST />
                                     </VAR>
                                 </SCOPE>
                             </VAR>
-                            <VAR name = "PreDemodGainsLosses">
-                                <SCOPE>
-                                    <VAR name = "GainLossList">
-                                        <LIST />
-                                    </VAR>
-                                </SCOPE>
-                            </VAR>
-                            <VAR name = "EnableLinkMargin">
-                                <BOOL>true</BOOL>
-                            </VAR>
-                            <VAR name = "LinkMarginType">
-                                <STRING>&quot;Eb/No&quot;</STRING>
-                            </VAR>
-                            <VAR name = "LinkMarginThreshold">
-                                <QUANTITY Dimension = "RatioUnit" Unit = "units">
-                                    <REAL>11.22018454301964</REAL>
+                            <VAR name = "Frequency">
+                                <QUANTITY Dimension = "FrequencyUnit" Unit = "Hz">
+                                    <REAL>915000000</REAL>
                                 </QUANTITY>
                             </VAR>
-                            <VAR name = "UseRain">
-                                <BOOL>true</BOOL>
+                            <VAR name = "Modulator">
+                                <VAR name = "QPSK">
+                                    <SCOPE Class = "Modulator">
+                                        <VAR name = "ComponentName">
+                                            <STRING>&quot;QPSK&quot;</STRING>
+                                        </VAR>
+                                        <VAR name = "UseSignalPSD">
+                                            <BOOL>false</BOOL>
+                                        </VAR>
+                                        <VAR name = "NumPSDNulls">
+                                            <INT>15</INT>
+                                        </VAR>
+                                        <VAR name = "UseCDMASpread">
+                                            <BOOL>false</BOOL>
+                                        </VAR>
+                                        <VAR name = "ChipsPerBit">
+                                            <INT>1</INT>
+                                        </VAR>
+                                        <VAR name = "AutoScaleBandwidth">
+                                            <BOOL>true</BOOL>
+                                        </VAR>
+                                        <VAR name = "SymmetricBandwidth">
+                                            <BOOL>true</BOOL>
+                                        </VAR>
+                                        <VAR name = "UpperBandwidthLimit">
+                                            <QUANTITY Dimension = "BandwidthUnit" Unit = "Hz">
+                                                <REAL>250000</REAL>
+                                            </QUANTITY>
+                                        </VAR>
+                                        <VAR name = "LowerBandwidthLimit">
+                                            <QUANTITY Dimension = "BandwidthUnit" Unit = "Hz">
+                                                <REAL>-250000</REAL>
+                                            </QUANTITY>
+                                        </VAR>
+                                        <VAR name = "Bandwidth">
+                                            <QUANTITY Dimension = "BandwidthUnit" Unit = "Hz">
+                                                <REAL>500000</REAL>
+                                            </QUANTITY>
+                                        </VAR>
+                                        <VAR name = "Type">
+                                            <STRING>&quot;QPSK&quot;</STRING>
+                                        </VAR>
+                                    </SCOPE>
+                                </VAR>
                             </VAR>
-                            <VAR name = "RainOutagePercent">
-                                <REAL>0.1</REAL>
+                            <VAR name = "DataRate">
+                                <QUANTITY Dimension = "DataRate" Unit = "b*sec^-1">
+                                    <REAL>500000</REAL>
+                                </QUANTITY>
                             </VAR>
-                            <VAR name = "Interference">
-                                <SCOPE>
-                                    <VAR name = "Enabled">
-                                        <BOOL>false</BOOL>
-                                    </VAR>
-                                    <VAR name = "Emitters">
-                                        <LISTLINKTOOBJ />
-                                    </VAR>
-                                    <VAR name = "IncludeActiveCommSystemInterferenceEmitters">
-                                        <BOOL>false</BOOL>
-                                    </VAR>
-                                </SCOPE>
-                            </VAR>
-                            <VAR name = "GOverT">
-                                <QUANTITY Dimension = "GainTempRatio" Unit = "units*K^-1">
-                                    <REAL>0.01174897554939529</REAL>
+                            <VAR name = "EIRP">
+                                <QUANTITY Dimension = "PowerUnit" Unit = "W">
+                                    <REAL>10</REAL>
                                 </QUANTITY>
                             </VAR>
                             <VAR name = "UsePolarization">
                                 <BOOL>true</BOOL>
                             </VAR>
                             <VAR name = "Polarization">
-                                <VAR name = "Right-hand Circular">
+                                <VAR name = "Linear">
                                     <SCOPE Class = "Polarization">
+                                        <VAR name = "ReferenceAxis">
+                                            <STRING>&quot;X Axis&quot;</STRING>
+                                        </VAR>
+                                        <VAR name = "TiltAngle">
+                                            <QUANTITY Dimension = "AngleUnit" Unit = "rad">
+                                                <REAL>0</REAL>
+                                            </QUANTITY>
+                                        </VAR>
                                         <VAR name = "CrossPolLeakage">
                                             <QUANTITY Dimension = "RatioUnit" Unit = "units">
                                                 <REAL>1e-06</REAL>
                                             </QUANTITY>
                                         </VAR>
                                         <VAR name = "Type">
-                                            <STRING>&quot;Right-hand Circular&quot;</STRING>
+                                            <STRING>&quot;Linear&quot;</STRING>
                                         </VAR>
                                     </SCOPE>
                                 </VAR>
-                            </VAR>
-                            <VAR name = "Frequency">
-                                <QUANTITY Dimension = "FrequencyUnit" Unit = "Hz">
-                                    <REAL>2200000000</REAL>
-                                </QUANTITY>
-                            </VAR>
-                            <VAR name = "FrequencyAutoTracking">
-                                <BOOL>false</BOOL>
                             </VAR>
                         </SCOPE>
                     </VAR>
@@ -312,7 +307,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{21EC7A73-C722-4AC9-AF45-09BCF143AC62}&quot;</STRING>
+                                                        <STRING>&quot;{22FA6B31-078E-470B-9FB9-630435EAD5C8}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -433,7 +428,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{3D39CAE6-DD5B-4D05-A554-21B6CFA77B75}&quot;</STRING>
+                                                        <STRING>&quot;{6502C13F-E6EE-422A-8405-9FB61847DCB0}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -533,7 +528,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{E74522AD-6216-4AB6-BC65-EB71E93F4B09}&quot;</STRING>
+                                                        <STRING>&quot;{6BBF73D4-7538-4805-9009-F0AF62F75CC2}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -624,7 +619,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{92863E8F-49F4-4C39-8EC5-BB1A283B801B}&quot;</STRING>
+                                                        <STRING>&quot;{FBD6AF18-0AD0-47AD-9848-C2F979FAA30E}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -723,7 +718,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{D640A118-D73E-4BA5-B8E1-46237BAB6022}&quot;</STRING>
+                                                        <STRING>&quot;{E80A72A4-13DD-4905-ADAD-BC76E0A0CEB3}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -811,7 +806,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{0556E0CC-092F-415E-BA5C-B382E61DADEA}&quot;</STRING>
+                                                        <STRING>&quot;{E42630DD-09FD-4FB5-9687-B430FB37DF7B}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -918,7 +913,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{95965858-1F83-40D2-82BE-3E1C0DF1EBE6}&quot;</STRING>
+                                                        <STRING>&quot;{22399D26-3385-4B30-9F4B-D7C93BED2A38}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -1027,7 +1022,7 @@ BEGIN Receiver
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{6A3C37C7-8004-4677-B0B5-4E3758B3482E}&quot;</STRING>
+                                                        <STRING>&quot;{8DB3C4BE-A72A-4755-9900-2276B5C01C78}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -1108,7 +1103,7 @@ BEGIN Receiver
         </SCOPE>
     </VAR>
 </SCOPE>
-END Receiver
+END Transmitter
 
 BEGIN Extensions
 
@@ -1200,6 +1195,113 @@ BEGIN Extensions
                         MaxElevation		 90
                     END AzElPatternDef
                 END CntrAntAzEl
+            END ContourDefinition
+        END ContourSet
+
+        BEGIN ContourSet EIRP
+            Altitude		 0
+            ShowAtAltitude		 Off
+            Projected		 On
+            Relative		 On
+            ShowLabels		 Off
+            LineWidth		 1
+            DecimalDigits		 1
+            ColorRamp		 On
+            ColorRampStartColor		 #0000ff
+            ColorRampEndColor		 #ff0000
+            BEGIN ContourDefinition
+                BEGIN CntrAntAzEl
+                    CoordinateSystem		 0
+                    BEGIN AzElPatternDef
+                        SetResolutionTogether		 0
+                        NumAzPoints		 181
+                        AzimuthRes		 2
+                        MinAzimuth		 -180
+                        MaxAzimuth		 180
+                        NumElPoints		 91
+                        ElevationRes		 1
+                        MinElevation		 0
+                        MaxElevation		 90
+                    END AzElPatternDef
+                END CntrAntAzEl
+            END ContourDefinition
+        END ContourSet
+
+        BEGIN ContourSet Flux Density
+            Altitude		 0
+            ShowAtAltitude		 Off
+            Projected		 On
+            Relative		 On
+            ShowLabels		 Off
+            LineWidth		 1
+            DecimalDigits		 1
+            ColorRamp		 On
+            ColorRampStartColor		 #0000ff
+            ColorRampEndColor		 #ff0000
+            BEGIN ContourDefinition
+                BEGIN CntrAntLatLon
+                    SetResolutionTogether		 true
+                    Resolution		 1 1
+                    ElevationAngleConstraint		 90
+                    BEGIN LatLonSphGrid
+                        Centroid		 0 0
+                        ConeAngle		 0
+                        NumPts		 181 91
+                        Altitude		 0
+                    END LatLonSphGrid
+                END CntrAntLatLon
+            END ContourDefinition
+        END ContourSet
+
+        BEGIN ContourSet RIP
+            Altitude		 0
+            ShowAtAltitude		 Off
+            Projected		 On
+            Relative		 On
+            ShowLabels		 Off
+            LineWidth		 1
+            DecimalDigits		 1
+            ColorRamp		 On
+            ColorRampStartColor		 #0000ff
+            ColorRampEndColor		 #ff0000
+            BEGIN ContourDefinition
+                BEGIN CntrAntLatLon
+                    SetResolutionTogether		 true
+                    Resolution		 1 1
+                    ElevationAngleConstraint		 90
+                    BEGIN LatLonSphGrid
+                        Centroid		 0 0
+                        ConeAngle		 0
+                        NumPts		 181 91
+                        Altitude		 0
+                    END LatLonSphGrid
+                END CntrAntLatLon
+            END ContourDefinition
+        END ContourSet
+
+        BEGIN ContourSet Spectral Flux Density
+            Altitude		 0
+            ShowAtAltitude		 Off
+            Projected		 On
+            Relative		 On
+            ShowLabels		 Off
+            LineWidth		 1
+            DecimalDigits		 1
+            ColorRamp		 On
+            ColorRampStartColor		 #0000ff
+            ColorRampEndColor		 #ff0000
+            BEGIN ContourDefinition
+                BEGIN CntrAntLatLon
+                    SetResolutionTogether		 true
+                    Resolution		 1 1
+                    ElevationAngleConstraint		 90
+                    BEGIN LatLonSphGrid
+                        Centroid		 0 0
+                        ConeAngle		 0
+                        NumPts		 181 91
+                        Altitude		 0
+                    END LatLonSphGrid
+                END CntrAntLatLon
             END ContourDefinition
         END ContourSet
     END Contours

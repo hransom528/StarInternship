@@ -1907,12 +1907,6 @@ BEGIN Satellite
         END ObjectCoverage
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN RadarCrossSection
@@ -2325,6 +2319,7 @@ BEGIN Satellite
         Class Transmitter
 
             SBandTransmitter		
+            UHFTransmitter		
 
         END Class
 

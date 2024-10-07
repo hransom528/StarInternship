@@ -1531,9 +1531,9 @@ Simulation of SPICESat subsystems
 
                 StartTime		 10 Mar 2024 16:00:00.000000000
                 EndTime		 11 Mar 2024 16:00:00.000000000
-                CurrentTime		 10 Mar 2024 16:00:00.000000000
-                Direction		 Forward
-                UpdateDelta		 10
+                CurrentTime		 10 Mar 2024 22:33:22.857600000
+                Direction		 Reverse
+                UpdateDelta		 5
                 RefreshDelta		 0.010000
                 XRealTimeMult		 1
                 RealTimeOffset		 0
@@ -1617,7 +1617,7 @@ Simulation of SPICESat subsystems
                         PrimaryBody		 Earth
                         SecondaryBody		 Sun
                         CenterLatitude		 0
-                        CenterLongitude		 0
+                        CenterLongitude		 -6.629834254143759
                         ProjectionAltitude		 63621860
                         FieldOfView		 35
                         OrthoDisplayDistance		 20000000
@@ -1643,7 +1643,7 @@ Simulation of SPICESat subsystems
                         Resolution		 VeryLow
                         CoordinateSys		 ECF
                         UseBackgroundImage		 On
-                        UseBingForBackground		 On
+                        UseBingForBackground		 Off
                         BingType		 Aerial
                         BingLogoHorizAlign		 Right
                         BingLogoVertAlign		 Bottom
@@ -1654,7 +1654,7 @@ Simulation of SPICESat subsystems
                         BEGIN ZoomLocations
                             BEGIN ZoomLocation
                                 CenterLat		 0
-                                CenterLon		 0
+                                CenterLon		 -6.629834254143759
                                 ZoomWidth		 360
                                 ZoomHeight		 180
                             END ZoomLocation
@@ -1864,7 +1864,7 @@ Simulation of SPICESat subsystems
                             Resolution		 VeryLow
                             CoordinateSys		 ECF
                             UseBackgroundImage		 On
-                            UseBingForBackground		 On
+                            UseBingForBackground		 Off
                             BingType		 Aerial
                             BingLogoHorizAlign		 Right
                             BingLogoVertAlign		 Bottom
@@ -2259,10 +2259,14 @@ Simulation of SPICESat subsystems
         END Instance
         Instance Place/New_Brunswick
             Place/New_Brunswick		
-            Place/New_Brunswick/Antenna/Antenna1		
+            Place/New_Brunswick/Antenna/UHFGroundAntenna		
+            Place/New_Brunswick/Sensor/UHFTrackingSensor		
         END Instance
-        Instance Place/New_Brunswick/Antenna/Antenna1
-            Place/New_Brunswick/Antenna/Antenna1		
+        Instance Place/New_Brunswick/Antenna/UHFGroundAntenna
+            Place/New_Brunswick/Antenna/UHFGroundAntenna		
+        END Instance
+        Instance Place/New_Brunswick/Sensor/UHFTrackingSensor
+            Place/New_Brunswick/Sensor/UHFTrackingSensor		
         END Instance
         Instance Place/Punta_Arenas
             Place/Punta_Arenas		
@@ -2289,10 +2293,12 @@ Simulation of SPICESat subsystems
         END Instance
         Instance Satellite/SPICESat
             *		
+            Place/New_Brunswick/Sensor/UHFTrackingSensor		
             Satellite/SPICESat		
             Satellite/SPICESat/Antenna/UHFAntenna		
             Satellite/SPICESat/Receiver/SBandReceiver		
             Satellite/SPICESat/Transmitter/SBandTransmitter		
+            Satellite/SPICESat/Transmitter/UHFTransmitter		
         END Instance
         Instance Satellite/SPICESat/Antenna/UHFAntenna
             Satellite/SPICESat/Antenna/UHFAntenna		
@@ -2302,6 +2308,9 @@ Simulation of SPICESat subsystems
         END Instance
         Instance Satellite/SPICESat/Transmitter/SBandTransmitter
             Satellite/SPICESat/Transmitter/SBandTransmitter		
+        END Instance
+        Instance Satellite/SPICESat/Transmitter/UHFTransmitter
+            Satellite/SPICESat/Transmitter/UHFTransmitter		
         END Instance
     END References
 
